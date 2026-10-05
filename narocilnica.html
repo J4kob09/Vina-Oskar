@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jakob Markuš">
+  <title>Naročilnica vin — Vina Oskar | Posestvo Malečnik</title>
+
+  <!-- Ikona na zavihku -->
+  <link rel="icon" href="images/oskar_title.png">
+
+  <!-- Enoten stilski list v črno-srebrnem slogu -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Googlovi pisavi: Playfair Display za naslove & Montserrat za berljivo besedilo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+
+  <!-- FIKSNA ZGORNJA NAVIGACIJA -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Domov</a></li>
+      <li><a href="o_nas.html">O nas</a></li>
+      <li><a href="kmecki_turizem.html">Kmečki turizem</a></li>
+      <li><a href="narocilnica.html">Naročilnica</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <div class="container order-container">
+
+    <!-- GLAVA STRANI -->
+    <header>
+      <div class="brand">
+        <h1>Naročilnica vin</h1>
+      </div>
+      <div class="header-subtitle">
+        <span>Neposredno naročilo iz kleti • Vina Oskar Malečnik</span>
+      </div>
+    </header>
+
+    <!-- UVODNO OBVESTILO -->
+    <section class="order-intro-card">
+      <p>
+        <strong>Naročite pristna štajerska vina neposredno od vinarja:</strong><br>
+        Izberite želene količine buteljk vin in penin Oskar. Po oddanem naročilu vas bomo v najkrajšem času kontaktirali z informativnim izračunom in potrditvijo naročila. Vina so na voljo za <strong>osebni prevzem na posestvu v Malečniku</strong> ali za <strong>varno dostavo s hitro pošto v certificirani kartonski embalaži</strong> po vsej Sloveniji.
+      </p>
+    </section>
+
+    <!-- OBRAZEC NAROČILNICE -->
+    <form 
+      action="kontakt.html"
+      name="kontakt"
+      method="POST"
+      data-netlify="true"
+    >
+
+      <!-- SKLOP 1: PENEČA VINA -->
+      <div class="order-section-title">
+        <h3>🍾 Peneča vina (Klasična metoda)</h3>
+        <span>Sekundarna fermentacija • 0,75 l</span>
+      </div>
+
+      <div class="wine-order-grid">
+
+        <!-- Brut Penina -->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/brut.jpg" alt="Brut Penina" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Brut Penina Oskar</h4>
+              <p>Zorenje na kvasovkah min. 24 mesecev • Suho • Brioš in sveži citrusi</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="qty_brut" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">stekl.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brut Rosé Penina -->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/penece.jpg" alt="Brut Rose Penina" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Brut Rosé Penina</h4>
+              <p>100% Modri pinot • Klasična metoda • Nežna svežina gozdnih jagod</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="qty_rose" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">stekl.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SKLOP 2: BELA VINA -->
+      <div class="order-section-title">
+        <h3>🥂 Bela vina</h3>
+        <span>Malečniški lapor • Svežina & Aromatika • 0,75 l</span>
+      </div>
+
+      <div class="wine-order-grid">
+
+        <!-- Chardonnay -->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/belo.jpg" alt="Chardonnay" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Chardonnay Oskar</h4>
+              <p>Suho • Zrelo rumeno jabolko, pridih lesa in masla, polno telo</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="qty_chardonnay" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">stekl.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sauvignon Blanc -->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/sauvignon.jpg" alt="Sauvignon Blanc" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Sauvignon Blanc</h4>
+              <p>Suho • Prepoznavna štajerska zvrst, bezgov cvet, kosmulja in mineralnost</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="qty_sauvignon" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">stekl.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Renski rizling -->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/belo.jpg" alt="Renski rizling" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Renski rizling</h4>
+              <p>Polsuho • Plemenite cvetlično-breskove note, živahna mineralna kislina</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="qty_rizling" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">stekl.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SKLOP 3: RDEČA VINA -->
+      <div class="order-section-title">
+        <h3>🍷 Rdeča vina</h3>
+        <span>Zorenje v hrastovih sodih • Rubinasta globina • 0,75 l</span>
+      </div>
+
+      <div class="wine-order-grid">
+
+        <!-- Merlot -->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/rdece.jpg" alt="Merlot" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Merlot Oskar</h4>
+              <p>Suho • Zrele slive, gozdne robide, mehek žameten zaključek</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="qty_merlot" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">stekl.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modri pinot -->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/rdece.jpg" alt="Modri pinot" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Modri pinot</h4>
+              <p>Suho • Prefinjeno rdeče jagodičevje, začimbe in elegantni hrastovi tanini</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="qty_modri_pinot" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">stekl.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SKLOP 4: DARILNI PAKETI -->
+      <div class="order-section-title">
+        <h3>🎁 Darilna embalaža & Paketi</h3>
+        <span>Za osebna ali poslovna darila</span>
+      </div>
+
+      <div class="wine-order-grid">
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <div class="wine-thumb" style="display:flex;align-items:center;justify-content:center;font-size:24px;">📦</div>
+            <div class="wine-name-desc">
+              <h4>Darilna lesena škatla za 2 steklenici</h4>
+              <p>Graviran logotip Vina Oskar, vključena dekorativna lesna volna</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">Dodatek</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="qty_darilna_skatla" min="0" max="50" value="0" placeholder="0">
+              <span class="qty-unit">kos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PODATKI O NAROČNIKU IN DOSTAVI -->
+      <div class="customer-form-card">
+        <h3 style="font-family: var(--font-serif); font-size: 24px; color: #ffffff; margin: 0 0 8px 0;">Podatki o naročniku</h3>
+        <p style="font-size: 13px; color: var(--text-muted); margin: 0 0 25px 0;">Vnesite vaše podatke za potrditev naročila in izračun poštnine ali pripravo prevzema.</p>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="ime">Ime in priimek *</label>
+            <input type="text" id="ime" name="ime" placeholder="Janez Novak" required>
+          </div>
+          <div class="form-group">
+            <label for="telefon">Telefonska številka *</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+386 41 123 456" required>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="email">E-poštni naslov *</label>
+            <input type="email" id="email" name="email" placeholder="janez.novak@email.si" required>
+          </div>
+          <div class="form-group">
+            <label for="podjetje">Podjetje / Naziv (neobvezno za račun)</label>
+            <input type="text" id="podjetje" name="podjetje" placeholder="Naziv podjetja in ID za DDV">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="naslov">Naslov za dostavo (Ulica, hišna št., poštna št. in kraj) *</label>
+          <input type="text" id="naslov" name="naslov" placeholder="Slovenska ulica 10, 2000 Maribor" required>
+        </div>
+
+        <!-- Način prevzema -->
+        <div class="form-group" style="margin-top: 15px;">
+          <label>Način prevzema / dostave *</label>
+          <div class="delivery-options">
+            <label class="radio-option">
+              <input type="radio" name="dostava" value="posta" checked>
+              <div class="radio-text">
+                <strong>📦 Varna dostava po pošti na dom</strong>
+                <span>Dostava po celotni Sloveniji v trpežni vinski embalaži za buteljke.</span>
+              </div>
+            </label>
+
+            <label class="radio-option">
+              <input type="radio" name="dostava" value="posestvo">
+              <div class="radio-text">
+                <strong>🏡 Osebni prevzem na posestvu</strong>
+                <span>Prevzem v Malečniku pri Mariboru ob predhodnem dogovoru o uri.</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Opombe -->
+        <div class="form-group order-notes">
+          <label for="opombe">Sporočilo ali posebne želje (darilno sporočilo, čas prevzema)</label>
+          <textarea id="opombe" name="opombe" rows="3" placeholder="Želite darilno posvetilo ali imate posebna navodila za dostavo? Zapišite tukaj..."></textarea>
+        </div>
+
+        <!-- Varnostna potrditev -->
+        <p style="font-size: 11px; color: var(--silver-accent); margin: 15px 0 20px 0; line-height: 1.5;">
+          * Z oddajo naročilnice potrjujete, da ste polnoletna oseba (stari 18 let ali več). Po oddaji vam bomo poslali potrditveno sporočilo s točnim povzetkom naročila in plačilnimi podatki.
+        </p>
+
+        <!-- Gumb za oddajo -->
+        <button type="submit" style="font-size: 13px; padding: 16px;">
+          Oddaj povpraševanje za naročilo vin
+        </button>
+      </div>
+
+    </form>
+
+    <!-- TRAK GARANCIJE KAKOVOSTI -->
+    <section class="order-guarantee-strip">
+      <div class="guarantee-box">
+        <span>📦</span>
+        <div><strong>Varno pakiranje</strong><br><small style="color:var(--text-muted)">Preizkušena kartonska zaščita</small></div>
+      </div>
+      <div class="guarantee-box">
+        <span>🍇</span>
+        <div><strong>Neposredno iz kleti</strong><br><small style="color:var(--text-muted)">100% pristna Vina Oskar</small></div>
+      </div>
+      <div class="guarantee-box">
+        <span>🤝</span>
+        <div><strong>Osebni pristop</strong><br><small style="color:var(--text-muted)">Matej Markuš, posestvo Malečnik</small></div>
+      </div>
+    </section>
+
+    <!-- CTA VRSTICA -->
+    <div class="cta-row">
+      <a href="vina.html" class="btn-secondary">Nazaj na katalog vin</a>
+      <a href="kontakt.html" class="btn-secondary">Imate vprašanje?</a>
+    </div>
+
+    <!-- NOGA STRANI -->
+    <footer>
+      <p>© 2025 Vina Oskar. Posestvo Malečnik pri Mariboru.</p>
+      <div class="footer-links">
+        <a href="index.html">Domov</a>
+        <a href="o_nas.html">O nas</a>
+        <a href="kmecki_turizem.html">Kmečki turizem</a>
+        <a href="narocilnica.html">Naročilnica</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
