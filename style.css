@@ -1085,8 +1085,8 @@ footer p {
     }
 
     .wine-thumb {
-      width: 52px;
-      height: 52px;
+      width: 80px;
+      height: 80px;
       border-radius: 8px;
       object-fit: cover;
       border: 1px solid var(--surface-border);
