@@ -346,6 +346,7 @@ h2,
   margin: 20px 0 35px 0;
 }
 
+
 .story-lead {
   font-size: 17px;
   line-height: 1.85;
@@ -356,6 +357,22 @@ h2,
 .story-lead strong {
   color: #ffffff;
   border-bottom: 1px dotted var(--silver-accent);
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.intro-content .story-lead {
+  flex: 1;
+}
+
+.intro-content img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
 }
 
 /* Pas z vabilom na posestvo (.visit-banner) */
@@ -1008,9 +1025,10 @@ footer p {
       width: 100%;
       height: 90%;
       border-radius: 15px;
+      margin-top: 70px;
     }
 
-    /* Dodatni specifični slogi za naročilnico vin narocilnica.html */
+    /* Dodatni specifični slogi za narocilnica.html */
     .order-container {
       max-width: 960px;
       margin: 0 auto;
@@ -1255,4 +1273,407 @@ footer p {
       .delivery-options {
         grid-template-columns: 1fr;
       }
+    }
+
+/* ============================================================
+   Popravek: ostre slike steklenic na strani peneca_vina.html
+   ============================================================ */
+.card-img-wine {
+  height: auto;
+  aspect-ratio: 4 / 5;
+  background: #ffffff;
+}
+
+.card-img-wine img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+
+    /* ============================================================
+       Specifični slogi za interaktivno Vinogradi (vinogradi.html)
+       ============================================================ */
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-intro-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 45px;
+      border-left: 4px solid var(--secondary);
+      text-align: center;
+    }
+    .gallery-intro-card p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .gallery-intro-card strong {
+      color: #ffffff;
+    }
+
+    /* Mreža za 5 okenc: zgoraj 3 kartice, spodaj 2 večji kartici */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 26px;
+      margin-bottom: 50px;
+    }
+
+    /* Prve 3 zasedejo po 2 stolpca od 6 (3 v vrsti) */
+    .gallery-card:nth-child(1),
+    .gallery-card:nth-child(2),
+    .gallery-card:nth-child(3) {
+      grid-column: span 2;
+    }
+
+    /* Zadnji 2 zasedeta po 3 stolpce od 6 (2 v vrsti) */
+    .gallery-card:nth-child(4),
+    .gallery-card:nth-child(5) {
+      grid-column: span 3;
+    }
+
+    .gallery-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(226, 232, 240, 0.5);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), 0 0 20px rgba(226, 232, 240, 0.15);
+    }
+
+    .gallery-thumb-wrap {
+      position: relative;
+      height: 280px;
+      overflow: hidden;
+      background: #080a0c;
+    }
+
+    .gallery-card:nth-child(4) .gallery-thumb-wrap,
+    .gallery-card:nth-child(5) .gallery-thumb-wrap {
+      height: 320px;
+    }
+
+    .gallery-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease, filter 0.4s ease;
+      filter: brightness(0.92) contrast(1.05);
+    }
+
+    .gallery-card:hover .gallery-thumb {
+      transform: scale(1.07);
+      filter: brightness(1) contrast(1.1);
+    }
+
+    /* Oznaka / Tag na sliki */
+    .gallery-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(11, 13, 16, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(226, 232, 240, 0.4);
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 5px 12px;
+      border-radius: 20px;
+      z-index: 2;
+    }
+
+    /* Ikona za povečavo čez sliko ob prehodu */
+    .zoom-hint {
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 13, 16, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 3;
+    }
+
+    .zoom-hint-btn {
+      background: rgba(226, 232, 240, 0.95);
+      color: #0b0d10;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-card:hover .zoom-hint {
+      opacity: 1;
+    }
+    .gallery-card:hover .zoom-hint-btn {
+      transform: scale(1);
+    }
+
+    .gallery-info {
+      padding: 22px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .gallery-info h3 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: #ffffff;
+      margin: 0 0 8px 0;
+      letter-spacing: 0.02em;
+    }
+
+    .gallery-info p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0 0 14px 0;
+    }
+
+    .gallery-click-cta {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--secondary);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ============================================================
+       MODALNO OKNO ZA POVEČAVO SLIKE IN OPIS (LIGHTBOX)
+       ============================================================ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 8, 10, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-content-card {
+      background: #14171d;
+      border: 1px solid rgba(226, 232, 240, 0.3);
+      border-radius: 20px;
+      max-width: 980px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(226, 232, 240, 0.12);
+      position: relative;
+      animation: modalPopIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes modalPopIn {
+      from {
+        transform: scale(0.92) translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .modal-image-col {
+      background: #080a0c;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid var(--surface-border);
+      overflow: hidden;
+      min-height: 420px;
+    }
+
+    .modal-image-col img {
+      width: 100%;
+      height: 100%;
+      max-height: 540px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .modal-text-col {
+      padding: 38px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .modal-badge {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--silver-accent);
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .modal-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      color: #ffffff;
+      margin: 0 0 10px 0;
+      line-height: 1.25;
+    }
+
+    .modal-description {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.85;
+      margin: 18px 0;
+    }
+
+    .modal-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 25px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .modal-features-list li {
+      font-size: 13px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .modal-features-list li span {
+      color: var(--secondary);
+      font-weight: bold;
+    }
+
+    .modal-footer {
+      display: flex;
+      gap: 14px;
+      margin-top: 15px;
+      padding-top: 20px;
+      border-top: 1px solid var(--surface-border);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      background: rgba(11, 13, 16, 0.75);
+      border: 1px solid rgba(226, 232, 240, 0.3);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      z-index: 10;
+    }
+
+    .modal-close-btn:hover {
+      background: #ffffff;
+      color: #0b0d10;
+    }
+
+    /* Navigacijski puščici v modalu */
+    .modal-nav-arrow {
+      position: absolute;
+      bottom: 20px;
+      background: rgba(17, 21, 28, 0.85);
+      border: 1px solid rgba(226, 232, 240, 0.3);
+      color: #ffffff;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.25s ease;
+      z-index: 5;
+    }
+    .modal-nav-arrow:hover {
+      background: #ffffff;
+      color: #0b0d10;
+    }
+    .modal-prev { left: 20px; }
+    .modal-next { right: 20px; }
+
+    /* Mobilna odzivnost */
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-card:nth-child(1),
+      .gallery-card:nth-child(2),
+      .gallery-card:nth-child(3),
+      .gallery-card:nth-child(4),
+      .gallery-card:nth-child(5) {
+        grid-column: span 1;
+      }
+      .modal-content-card {
+        grid-template-columns: 1fr;
+      }
+      .modal-image-col {
+        border-right: none;
+        border-bottom: 1px solid var(--surface-border);
+        min-height: 280px;
+      }
+    }
+
+    .slika {
+      width: 450px;
+      border-radius: 15px;
     }

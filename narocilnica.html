@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Jakob Markuš">
-  <meta name="description" content="Spletna stran za Vina Oskar.">
+  <meta name="description" content="Spletna stran za Vina Oskar. - Prostor kjer lahko naročate naše izdelke">
 
   <title>Naročilnica vin — Vina Oskar</title>
 
@@ -28,6 +28,7 @@
     <ul class="nav-links">
       <li><a href="index.html">Domov</a></li>
       <li><a href="o_nas.html">O nas</a></li>
+      <li><a href="vinogradi.html">Vinogradi</a></li>
       <li><a href="kmecki_turizem.html">Kmečki turizem</a></li>
       <li><a href="narocilnica.html">Naročilnica</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
@@ -42,15 +43,13 @@
         <img src="images/oskar_beli_logo.png" alt="beli logo">
         <h1>Naročilnica vin</h1>
       </div>
-      <div class="header-subtitle">
-      </div>
     </header>
 
     <!-- UVODNO OBVESTILO -->
     <section class="order-intro-card">
       <p>
-        <strong>Naročite pristna štajerska vina neposredno od vinarja:</strong><br>
-        Izberite želene količine buteljk vin in penin Oskar. Po oddanem naročilu vas bomo v najkrajšem času kontaktirali z informativnim izračunom in potrditvijo naročila. Vina so na voljo za <strong>osebni prevzem na posestvu v Malečniku</strong> ali za <strong>varno dostavo s hitro pošto v certificirani kartonski embalaži</strong> po vsej Sloveniji.
+        <h2>Obvestilo!</h2><br>
+        Ob naročilu se izdelek obračunava po paketih, zato 1 kos predstavlja 1 paket, ki vsebuje 6 steklenic, razen pri darilnih škatlah, ki so lahko za 1 steklenico ali 2.
       </p>
     </section>
 
@@ -62,7 +61,7 @@
 
       <!-- SKLOP 1: PENEČA VINA -->
       <div class="order-section-title">
-        <h3>🍾 Peneča vina (Klasična metoda)</h3>
+        <h3>🍾 Peneča vina</h3>
       </div>
 
       <div class="wine-order-grid">
@@ -72,15 +71,15 @@
           <div class="wine-order-info">
             <img src="images/brut.jpg" alt="Brut Penina" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Brut Penina Oskar</h4>
-              <p>Zorenje na kvasovkah min. 24 mesecev • Suho • Brioš in sveži citrusi</p>
+              <h4>Brut</h4>
+              <p>Sveža in suha penina z nežnimi sadnimi notami ter prijetno živahnostjo.</p>
             </div>
           </div>
           <div class="wine-order-controls">
-            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <span class="wine-packaging">6 X 0,75l</span>
             <div class="qty-input-wrapper">
               <input type="number" name="Brut" min="0" max="120" value="0" placeholder="0">
-              <span class="qty-unit">stekl.</span>
+              <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
         </div>
@@ -88,62 +87,98 @@
         <!-- Brut Rosé Penina -->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/penece.jpg" alt="Brut Rose Penina" class="wine-thumb">
+            <img src="images/rose.jpg" alt="Brut Rose Penina" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Brut Rosé Penina</h4>
-              <p>100% Modri pinot • Klasična metoda • Nežna svežina gozdnih jagod</p>
+              <h4>Brut Rosé</h4>
+              <p>Sveže in sadno vino nežne barve z elegantnim karakterjem ter prijetno pitkostjo.</p>
             </div>
           </div>
           <div class="wine-order-controls">
-            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
               <input type="number" name="Rose" min="0" max="120" value="0" placeholder="0">
-              <span class="qty-unit">stekl.</span>
+              <span class="qty-unit">Paket/-ov</span>
+            </div>
+          </div>
+        </div>
+
+        <!--Blanc De Blancs-->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/blanc_de_blancs.jpg" alt="Blanc de blanc Penina" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Blanc De Blancs</h4>
+              <p>BESEDILO</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">6 x 0,75l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="Blanc_De_Blancs" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">Paket/-ov</span>
+            </div>
+          </div>
+        </div>
+
+        <!--Blanc De Noir-->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/blanc_de_noir.jpg" alt="Blanc De Noir" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Blanc De Noir</h4>
+              <p>BESEDILO</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">6 x 0,75l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="Blanc_De_Noir" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- SKLOP 2: BELA VINA -->
+      <!-- SKLOP 2: CLASSIC VINA -->
       <div class="order-section-title">
-        <h3>🥂 Bela vina</h3>
+        <h3>🥂 Classic Vina</h3>
       </div>
 
       <div class="wine-order-grid">
 
-        <!-- Chardonnay -->
+        <!-- Laški Rizling -->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/belo.jpg" alt="Chardonnay" class="wine-thumb">
+            <img src="images/" alt="Laški Rizling" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Chardonnay Oskar</h4>
-              <p>Suho • Zrelo rumeno jabolko, pridih lesa in masla, polno telo</p>
+              <h4>Laški Rizlinh</h4>
+              <p>Sveže in elegantno vino z živahno kislino ter izrazito pitkostjo.</p>
             </div>
           </div>
           <div class="wine-order-controls">
-            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Chardonnay" min="0" max="120" value="0" placeholder="0">
-              <span class="qty-unit">stekl.</span>
+              <input type="number" name="Laški rizling" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
         </div>
 
-        <!-- Sauvignon Blanc -->
+        <!-- Sauvignon -->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/sauvignon.jpg" alt="Sauvignon Blanc" class="wine-thumb">
+            <img src="images/sauvignon.jpg" alt="Sauvignon" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Sauvignon Blanc</h4>
-              <p>Suho • Prepoznavna štajerska zvrst, bezgov cvet, kosmulja in mineralnost</p>
+              <h4>Sauvignon</h4>
+              <p>Aromatična in sveža sorta z izrazitim sadnim ter zeliščnim karakterjem.</p>
             </div>
           </div>
           <div class="wine-order-controls">
-            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
               <input type="number" name="Sauvignon" min="0" max="120" value="0" placeholder="0">
-              <span class="qty-unit">stekl.</span>
+              <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
         </div>
@@ -151,17 +186,71 @@
         <!-- Renski rizling -->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/belo.jpg" alt="Renski rizling" class="wine-thumb">
+            <img src="images/.jpg" alt="Renski rizling" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Renski rizling</h4>
-              <p>Polsuho • Plemenite cvetlično-breskove note, živahna mineralna kislina</p>
+              <h4>Renski Rizling</h4>
+              <p>Elegantno in mineralno vino z izrazito svežino, živahno kislino ter značilno sortno aromatiko</p>
             </div>
           </div>
           <div class="wine-order-controls">
-            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Rizling" min="0" max="120" value="0" placeholder="0">
-              <span class="qty-unit">stekl.</span>
+              <input type="number" name="Renski_Rizling" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">Paket/-ov</span>
+            </div>
+          </div>
+        </div>
+
+        <!--Šipon-->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/Sipon.jpg" alt="Šipon" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Šipon</h4>
+              <p>Svež in sadni značaj z živahno kislino ter prijetno mineralnostjo.</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">6 x 0,75l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="Šipon" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">Paket/-ov</span>
+            </div>
+          </div>
+        </div>
+
+        <!--Rumeni Muškat-->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/" alt="Rumeni Muškat" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Rumeni Muškat</h4>
+              <p>Izrazito aromatično in sadno vino z značilno muškatno noto ter prijetno svežino.</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">6 x 0,75l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="Rumeni_Muškat" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">Paket/-ov</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Špricling -->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/Spricling.jpg" alt="Rumeni Muškat" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Špricling</h4>
+              <p>Lahkotno in sveže vino z živahno kislino, ustvarjeno za osvežilen štajerski špricer.</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">6 x 0,75l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="Špricling" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
         </div>
@@ -170,43 +259,79 @@
 
       <!-- SKLOP 3: RDEČA VINA -->
       <div class="order-section-title">
-        <h3>🍷 Rdeča vina</h3>
+        <h3>🍷 Premium Vina</h3>
       </div>
 
       <div class="wine-order-grid">
 
-        <!-- Merlot -->
+        <!-- Sauvignon Premium -->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/rdece.jpg" alt="Merlot" class="wine-thumb">
+            <img src="images/" alt="Sauvignon Premium" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Merlot Oskar</h4>
+              <h4>Sauvignon Premium</h4>
               <p>Suho • Zrele slive, gozdne robide, mehek žameten zaključek</p>
             </div>
           </div>
           <div class="wine-order-controls">
-            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Merlot" min="0" max="120" value="0" placeholder="0">
-              <span class="qty-unit">stekl.</span>
+              <input type="number" name="Sauvignon_Premium" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
         </div>
 
-        <!-- Modri pinot -->
+        <!-- Chardonnay Premium-->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/rdece.jpg" alt="Modri pinot" class="wine-thumb">
+            <img src="images/chardonnay_prem.jpg" alt="Chardonnay Premium" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Modri pinot</h4>
-              <p>Suho • Prefinjeno rdeče jagodičevje, začimbe in elegantni hrastovi tanini</p>
+              <h4>Chardonnay Premium</h4>
+              <p>Bogato in elegantno vino z nežnimi sadnimi notami ter izrazito strukturo.</p>
             </div>
           </div>
           <div class="wine-order-controls">
-            <span class="wine-packaging">Buteljka 0,75 l</span>
+            <span class="wine-packaging">6 x 0,75l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="Chardonay_Premium" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">Paket/-ov</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modri Pinot Premium -->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/rdece.jpg" alt="Modri Pinot Premium" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Modri Pinot Premium</h4>
+              <p>Elegantno in sadno vino z nežno strukturo ter značilnim svežim karakterjem.</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
               <input type="number" name="Modri_pinot" min="0" max="120" value="0" placeholder="0">
-              <span class="qty-unit">stekl.</span>
+              <span class="qty-unit">Paket/-ov</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Šipon Premium -->
+        <div class="wine-order-row">
+          <div class="wine-order-info">
+            <img src="images/Sipon_premium.jpg" alt="Rumeni Muškat" class="wine-thumb">
+            <div class="wine-name-desc">
+              <h4>Šipon Premium</h4>
+              <p>Bogato in elegantno vino z izrazito kompleksnostjo, kremastim pookusom ter nežnimi lesnimi in maslenimi notami.</p>
+            </div>
+          </div>
+          <div class="wine-order-controls">
+            <span class="wine-packaging">6 x 0,75l</span>
+            <div class="qty-input-wrapper">
+              <input type="number" name="Šipon_Premium" min="0" max="120" value="0" placeholder="0">
+              <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
         </div>
@@ -215,25 +340,29 @@
 
       <!-- SKLOP 4: DARILNI PAKETI -->
       <div class="order-section-title">
-        <h3>🎁 Darilna embalaža & Paketi</h3>
+        <h3>🎁 Darilna embalaža</h3>
       </div>
 
       <div class="wine-order-grid">
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <div class="wine-thumb" style="display:flex;align-items:center;justify-content:center;font-size:24px;">📦</div>
+            <div class="wine-thumb" style="display:flex;align-items:center;justify-content:center;font-size:48px;">📦</div>
             <div class="wine-name-desc">
-              <h4>Darilna škatla za 2 steklenici</h4>
-              <p>Graviran logotip Vina Oskar, vključena dekorativna lesna volna</p>
+              <h4>Darilna škatla za 1 ali 2 steklenici</h4>
+              <p>Vrsto škatle (za 1 steklenico ali 2) prosimo zapišite v sporočila</p>
             </div>
           </div>
           <div class="wine-order-controls">
-            <span class="wine-packaging">Dodatek</span>
+            <span class="wine-packaging">količina darilnih škatel</span>
             <div class="qty-input-wrapper">
               <input type="number" name="Darilna_skatla" min="0" max="50" value="0" placeholder="0">
               <span class="qty-unit">kos</span>
             </div>
           </div>
+        </div>
+        <div class="slide">
+          <img class="slika" src="images/darilna_skatla.jpg">
+          <img class="slika" src="images/darilni_penina.jpg">
         </div>
       </div>
 
@@ -277,7 +406,7 @@
 
         <!-- Varnostna potrditev -->
         <p style="font-size: 11px; color: var(--silver-accent); margin: 15px 0 20px 0; line-height: 1.5;">
-          * Z oddajo naročilnice potrjujete, da ste polnoletna oseba (stari 18 let ali več). Po oddaji vam bomo poslali potrditveno sporočilo s točnim povzetkom naročila in plačilnimi podatki.
+          * Z oddajo naročilnice potrjujete, da ste polnoletna oseba (stari 18 let ali več).
         </p>
         
         <strong style="display: block; text-align: center;">
@@ -286,7 +415,7 @@
 
         <!-- Gumb za oddajo -->
         <button type="submit" style="font-size: 13px; padding: 16px;">
-          Oddaj povpraševanje za naročilo vin
+          Oddaj naročilo
         </button>
       </div>
 
@@ -294,16 +423,17 @@
 
     <!-- CTA VRSTICA -->
     <div class="cta-row">
-      <a href="vina.html" class="btn-secondary">Nazaj na katalog vin</a>
+      <a href="index.html" class="btn-secondary">Nazaj na katalog vin</a>
       <a href="kontakt.html" class="btn-secondary">Imate vprašanje?</a>
     </div>
 
     <!-- NOGA STRANI -->
     <footer>
-      <p>© 2025 Vina Oskar. Posestvo Malečnik pri Mariboru.</p>
+      <p>© 2026 Vina Oskar. Posestvo Malečnik pri Mariboru.</p>
       <div class="footer-links">
         <a href="index.html">Domov</a>
         <a href="o_nas.html">O nas</a>
+        <a href="vinogradi.html">Vinogradi</a>
         <a href="kmecki_turizem.html">Kmečki turizem</a>
         <a href="narocilnica.html">Naročilnica</a>
         <a href="kontakt.html">Kontakt</a>
