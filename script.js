@@ -114,3 +114,132 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+    //Koda za vinograde okenca  
+
+    const galleryData = [
+      {
+        src: 'images/malecnik.jpg',
+        title: 'Vinograd: Malečnik',
+        desc: 'Vinograd se nahaja v Malečniku na jugozahodni legi, ki omogoča dobro osončenost. Tla sestavlja lapornata podlaga, v zgornjih plasteh pa prevladuje težka ilovnata prst. Takšna sestava tal predstavlja značilnost vinogradniškega območja. V vinogradu so zasajene tri sorte vinske trte, in sicer laški rizling, šipon in sauvignon. Te sorte predstavljajo osnovo za pridelavo različnih vrst vina.',
+        features: [
+          '<span>Sorta grozdja:</span> Laški Rizling, Šipon in Sauvignon',
+          '<span>Velikost obdelovalne površine:</span> 2ha',
+          '<span>Pozicija:</span> Jugozahod',
+          '<span>Prst:</span> Lapornata podlaga, v zgornjih plasteh težka ilovnata'
+        ]
+      },
+      {
+        src: 'images/gorca.jpg',
+        title: 'Vinograd: Gorca',
+        desc: 'Vinograd se nahaja v Gorci na južni legi, ki omogoča dobro osončenost vinogradniških površin. Podlago tal sestavlja lapor, na površju pa je prst lahka in rodovitna. Takšne talne značilnosti so pomemben del okolja, v katerem raste vinska trta. V vinogradu sta zasajeni sorti modri pinot in rumeni muškat, ki se razlikujeta po svojih značilnostih in omogočata pridelavo različnih vrst vina.',
+        features: [
+          '<span>Sorta grozdja:</span> Modri Pinot in Rumeni Muškat',
+          '<span>Velikost obdelovalne površine:</span> 1,8ha',
+          '<span>Pozicija:</span> Jug',
+          '<span>Prst:</span> Lapornata podlaga, na površju lahka rodovitna'
+        ]
+      },
+      {
+        src: 'images/hrenca.jpg',
+        title: 'Vinograd: Hrenca',
+        desc: 'Vinograd se nahaja v Hrenci na jugovzhodni legi, ki omogoča dobro jutranjo osončenost. Tla sestavlja lapornata podlaga, na površju pa prevladuje ilovnata prst. Takšna sestava tal predstavlja pomembno značilnost vinogradniškega območja. V vinogradu sta zasajeni sorti laški rizling in renski rizling, ki sta znani beli vinski sorti.',
+        features: [
+          '<span>Sorta grozdja:</span> Laški Rizling in Renski Rizling',
+          '<span>Velikost obdelovalne površine:</span> 1,6ha',
+          '<span>Pozicija:</span> Jugovzhod',
+          '<span>Prst:</span> Lapornata podlaga, na površju ilovnata'
+        ]
+      },
+      {
+        src: 'images/',
+        title: 'Ruperče',
+        desc: 'Vinograd se nahaja v Ruperčah na vzhodni legi, ki omogoča dobro jutranjo osončenost. Tla so lahka in peščena, kar predstavlja pomembno značilnost vinogradniškega območja. V vinogradu je zasajena sorta chardonnay, ki spada med znane bele vinske sorte.',
+        features: [
+          '<span>Sorta grozdja:</span> Chardonnay',
+          '<span>Velikost obdelovalne površine:</span> 2,5ha',
+          '<span>Pozicija:</span> Vzhod',
+          '<span>Prst:</span> Lahka, peščena'
+        ]
+      },
+      {
+        src: 'images/trcova.jpg',
+        title: 'Trčova',
+        desc: 'Vinograd se nahaja v Trčovi na južni legi, ki omogoča dobro osončenost. Tla so peščeno lapornata, v globljih plasteh pa postanejo skalnata. Takšna sestava tal predstavlja značilnost tega vinogradniškega območja. V vinogradu je zasajena sorta laški rizling, ki spada med bele vinske sorte.',
+        features: [
+          '<span>Sorta grozdja:</span> Laški Rizling',
+          '<span>Velikost obdelovalne površine:</span> 1,3ha',
+          '<span>Pozicija:</span> Jug',
+          '<span>Prst:</span> Peščena lapornata v globjih plasteh skalnata'
+        ]
+      }
+    ];
+
+    let currentIndex = 0;
+    const modal = document.getElementById('galleryModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalBadge = document.getElementById('modalBadge');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalFeatures = document.getElementById('modalFeatures');
+
+    // Odpiranje modala z določenim indeksom
+    function openModal(index) {
+      currentIndex = index;
+      updateModalContent();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Onemogoči drsenje strani pod modalom
+    }
+
+    // Zapiranje modala
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Posodobitev vsebine modala
+    function updateModalContent() {
+      const item = galleryData[currentIndex];
+      modalImg.src = item.src;
+      modalImg.alt = item.title;
+      modalBadge.textContent = item.badge;
+      modalTitle.textContent = item.title;
+      modalDesc.textContent = item.desc;
+
+      // Generiranje točk
+      modalFeatures.innerHTML = '';
+      item.features.forEach(feat => {
+        const li = document.createElement('li');
+        li.innerHTML = feat;
+        modalFeatures.appendChild(li);
+      });
+    }
+
+    // Prejšnja slika
+    function prevImage(e) {
+      if (e) e.stopPropagation();
+      currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+      updateModalContent();
+    }
+
+    // Naslednja slika
+    function nextImage(e) {
+      if (e) e.stopPropagation();
+      currentIndex = (currentIndex + 1) % galleryData.length;
+      updateModalContent();
+    }
+
+    // Klik na temno ozadje zapre modal
+    function handleOverlayClick(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    }
+
+    // Upravljanje s tipkovnico (Esc za zaprtje, levo/desno za navigacijo)
+    document.addEventListener('keydown', function(e) {
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'ArrowRight') nextImage();
+    });
