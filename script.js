@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Pripravimo obrazec in ga pošljemo
-      orderForm.submit();
+      HTMLFormElement.prototype.submit.call(orderForm);
     });
   }
 
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     item.features.forEach(function (feature) {
       const li = document.createElement("li");
-      li.innerHTML = feature;
+      li.textContent = feature.replace(/<[^>]*>/g, "");
       modalFeatures.appendChild(li);
     });
   }

@@ -19,6 +19,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data:;
+    connect-src 'self';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+  ">
+
 </head>
 
 <body>
@@ -157,7 +169,7 @@
           <div class="wine-order-info">
             <img src="images/laski_rizling.jpg" alt="Laški Rizling" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Laški Rizlinh - 9,49€</h4>
+              <h4>Laški Rizling - 9,49€</h4>
               <p>Sveže in elegantno vino z živahno kislino ter izrazito pitkostjo.</p>
             </div>
           </div>
@@ -418,7 +430,7 @@
         
         
         <label class="pogoji">
-          <input type="checkbox" required>
+          <input type="checkbox" name="polnoletnost" value="potrjeno" required>
           Potrjujem, da sem polnoleten/-na (18 let ali več) in da lahko v skladu z veljavno zakonodajo naročim alkoholne pijače.
         </label>
         
