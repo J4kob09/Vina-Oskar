@@ -1677,3 +1677,18 @@ footer p {
       width: 450px;
       border-radius: 15px;
     }
+
+    
+    .pogoji {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .pogoji input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      margin: 0;
+      flex-shrink: 0;
+    }

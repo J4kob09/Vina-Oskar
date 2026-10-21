@@ -55,9 +55,14 @@
 
     <!-- OBRAZEC NAROČILNICE -->
     <form 
-      action="https://formspree.io/f/mdeaonyr"
-      method="POST"
-    >
+      action="https://formsubmit.app/f/ycdtxqyp3a" method="POST">
+      
+      <input type="hidden" name="_subject" value="Novo naročilo Vina Oskar">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="Povzetek naročila" id="povzetek_email">
+      <input type="hidden" name="Skupna cena" id="skupna_cena_email">      
+      <input type="hidden" name="_autoresponse" value="Hvala za vaše naročilo pri Vina Oskar! Vaše naročilo smo uspešno prejeli.">
+
 
       <!-- SKLOP 1: PENEČA VINA -->
       <div class="order-section-title">
@@ -71,14 +76,14 @@
           <div class="wine-order-info">
             <img src="images/brut.jpg" alt="Brut Penina" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Brut</h4>
+              <h4>Brut - 16,90€</h4>
               <p>Sveža in suha penina z nežnimi sadnimi notami ter prijetno živahnostjo.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 X 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Brut" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Brut" min="0" max="120" value="0" placeholder="0" data-cena="16.90" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -89,14 +94,14 @@
           <div class="wine-order-info">
             <img src="images/rose.jpg" alt="Brut Rose Penina" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Brut Rosé</h4>
+              <h4>Brut Rosé - 16,90€</h4>
               <p>Sveže in sadno vino nežne barve z elegantnim karakterjem ter prijetno pitkostjo.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Rose" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Rose" min="0" max="120" value="0" placeholder="0"  data-cena="16.90" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -107,14 +112,14 @@
           <div class="wine-order-info">
             <img src="images/blanc_de_blancs.jpg" alt="Blanc de blanc Penina" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Blanc De Blancs</h4>
-              <p>BESEDILO</p>
+              <h4>Blanc De Blancs - 19,70€</h4>
+              <p>Chardonnay izraža popolno eleganco v kombinaciji z krepko kislino in popolno ma suhim pookusom.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Blanc_De_Blancs" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Blanc_De_Blancs" min="0" max="120" value="0" placeholder="0" data-cena="19.70" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -125,14 +130,14 @@
           <div class="wine-order-info">
             <img src="images/blanc_de_noir.jpg" alt="Blanc De Noir" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Blanc De Noir</h4>
-              <p>BESEDILO</p>
+              <h4>Blanc De Noir - 19,70€</h4>
+              <p>Modri pinot navdušuje s tipičnim Šampanjskim profilom, ter izredno bogatim suhim zaključkom.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Blanc_De_Noir" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Blanc_De_Noir" min="0" max="120" value="0" placeholder="0" data-cena="19.70" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -150,16 +155,16 @@
         <!-- Laški Rizling -->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/" alt="Laški Rizling" class="wine-thumb">
+            <img src="images/laski_rizling.jpg" alt="Laški Rizling" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Laški Rizlinh</h4>
+              <h4>Laški Rizlinh - 9,49€</h4>
               <p>Sveže in elegantno vino z živahno kislino ter izrazito pitkostjo.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Laški rizling" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Laški rizling" min="0" max="120" value="0" placeholder="0" data-cena="9.49" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -170,14 +175,14 @@
           <div class="wine-order-info">
             <img src="images/sauvignon.jpg" alt="Sauvignon" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Sauvignon</h4>
+              <h4>Sauvignon - 9,49€</h4>
               <p>Aromatična in sveža sorta z izrazitim sadnim ter zeliščnim karakterjem.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Sauvignon" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Sauvignon" min="0" max="120" value="0" placeholder="0" data-cena="9.49" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -186,16 +191,16 @@
         <!-- Renski rizling -->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/.jpg" alt="Renski rizling" class="wine-thumb">
+            <img src="images/renski_rizling.jpg" alt="Renski rizling" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Renski Rizling</h4>
+              <h4>Renski Rizling - 9,49€</h4>
               <p>Elegantno in mineralno vino z izrazito svežino, živahno kislino ter značilno sortno aromatiko</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Renski_Rizling" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Renski_Rizling" min="0" max="120" value="0" placeholder="0" data-cena="9.49" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -206,14 +211,14 @@
           <div class="wine-order-info">
             <img src="images/Sipon.jpg" alt="Šipon" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Šipon</h4>
+              <h4>Šipon - 9,49€</h4>
               <p>Svež in sadni značaj z živahno kislino ter prijetno mineralnostjo.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Šipon" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Šipon" min="0" max="120" value="0" placeholder="0" data-cena="9.49" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -222,16 +227,16 @@
         <!--Rumeni Muškat-->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/" alt="Rumeni Muškat" class="wine-thumb">
+            <img src="images/rumeni_muskat.jpg" alt="Rumeni Muškat" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Rumeni Muškat</h4>
+              <h4>Rumeni Muškat - 9,49€</h4>
               <p>Izrazito aromatično in sadno vino z značilno muškatno noto ter prijetno svežino.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Rumeni_Muškat" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Rumeni_Muškat" min="0" max="120" value="0" placeholder="0" data-cena="9.49" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -242,14 +247,14 @@
           <div class="wine-order-info">
             <img src="images/Spricling.jpg" alt="Rumeni Muškat" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Špricling</h4>
+              <h4>Špricling - 9,49€</h4>
               <p>Lahkotno in sveže vino z živahno kislino, ustvarjeno za osvežilen štajerski špricer.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Špricling" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Špricling" min="0" max="120" value="0" placeholder="0" data-cena="9.49" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -267,16 +272,16 @@
         <!-- Sauvignon Premium -->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/" alt="Sauvignon Premium" class="wine-thumb">
+            <img src="images/sauvignon_prem.jpg" alt="Sauvignon Premium" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Sauvignon Premium</h4>
+              <h4>Sauvignon Premium - 14,00€</h4>
               <p>Suho • Zrele slive, gozdne robide, mehek žameten zaključek</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Sauvignon_Premium" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Sauvignon_Premium" min="0" max="120" value="0" placeholder="0" data-cena="14.00" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -287,14 +292,14 @@
           <div class="wine-order-info">
             <img src="images/chardonnay_prem.jpg" alt="Chardonnay Premium" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Chardonnay Premium</h4>
+              <h4>Chardonnay Premium - 14,00€</h4>
               <p>Bogato in elegantno vino z nežnimi sadnimi notami ter izrazito strukturo.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Chardonay_Premium" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Chardonay_Premium" min="0" max="120" value="0" placeholder="0" data-cena="14.00" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -303,16 +308,16 @@
         <!-- Modri Pinot Premium -->
         <div class="wine-order-row">
           <div class="wine-order-info">
-            <img src="images/rdece.jpg" alt="Modri Pinot Premium" class="wine-thumb">
+            <img src="images/modri_pinot_prem.jpg" alt="Modri Pinot Premium" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Modri Pinot Premium</h4>
+              <h4>Modri Pinot Premium - 20,90€</h4>
               <p>Elegantno in sadno vino z nežno strukturo ter značilnim svežim karakterjem.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Modri_pinot" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Modri_pinot" min="0" max="120" value="0" placeholder="0" data-cena="20.90" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -323,14 +328,14 @@
           <div class="wine-order-info">
             <img src="images/Sipon_premium.jpg" alt="Rumeni Muškat" class="wine-thumb">
             <div class="wine-name-desc">
-              <h4>Šipon Premium</h4>
+              <h4>Šipon Premium - 19,50€</h4>
               <p>Bogato in elegantno vino z izrazito kompleksnostjo, kremastim pookusom ter nežnimi lesnimi in maslenimi notami.</p>
             </div>
           </div>
           <div class="wine-order-controls">
             <span class="wine-packaging">6 x 0,75l</span>
             <div class="qty-input-wrapper">
-              <input type="number" name="Šipon_Premium" min="0" max="120" value="0" placeholder="0">
+              <input type="number" name="Šipon_Premium" min="0" max="120" value="0" placeholder="0" data-cena="19.50" oninput="izracunajSkupaj()">
               <span class="qty-unit">Paket/-ov</span>
             </div>
           </div>
@@ -366,6 +371,12 @@
         </div>
       </div>
 
+      <div class="order-total">
+        <h3>Skupna cena naročila:
+          <span id="skupaj">0,00€</span>
+        </h3>
+      </div>
+
       <!-- PODATKI O NAROČNIKU IN DOSTAVI -->
       <div class="customer-form-card">
         <h3 style="font-family: var(--font-serif); font-size: 24px; color: #ffffff; margin: 0 0 8px 0;">Podatki o naročniku</h3>
@@ -385,7 +396,7 @@
         <div class="form-grid-2">
           <div class="form-group">
             <label for="email">E-poštni naslov *</label>
-            <input type="email" id="email" name="Email" placeholder="janez.novak@email.si" required>
+            <input type="email" id="email" name="email" placeholder="janez.novak@email.si" required>
           </div>
           <div class="form-group">
             <label for="podjetje">Podjetje / Naziv (neobvezno za račun)</label>
@@ -404,10 +415,12 @@
           <textarea id="opombe" name="opombe" rows="3" placeholder="Želite darilno posvetilo ali imate posebna navodila za dostavo? Zapišite tukaj..."></textarea>
         </div>
 
-        <!-- Varnostna potrditev -->
-        <p style="font-size: 11px; color: var(--silver-accent); margin: 15px 0 20px 0; line-height: 1.5;">
-          * Z oddajo naročilnice potrjujete, da ste polnoletna oseba (stari 18 let ali več).
-        </p>
+        
+        
+        <label class="pogoji">
+          <input type="checkbox" required>
+          Potrjujem, da sem polnoleten/-na (18 let ali več) in da lahko v skladu z veljavno zakonodajo naročim alkoholne pijače.
+        </label>
         
         <strong style="display: block; text-align: center;">
           Plačilo je možno ob dostavi naročila.
@@ -442,5 +455,6 @@
 
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
