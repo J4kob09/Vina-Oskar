@@ -256,14 +256,30 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.key === "ArrowRight") nextImage();
   });
 
+  // Dogodki galerije (namesto inline onclick atributov, ki jih CSP blokira)
   document.querySelectorAll(".gallery-card").forEach(function (card, i) {
-    card.addEventListener("click", function () { openModal(i); });
+    card.addEventListener("click", function () {
+      openModal(i);
+    });
   });
 
-  modal?.addEventListener("click", handleOverlayClick);
-  document.querySelector(".modal-close-btn")?.addEventListener("click", closeModal);
-  document.querySelector(".modal-prev")?.addEventListener("click", prevImage);
-  document.querySelector(".modal-next")?.addEventListener("click", nextImage);
+  if (modal) modal.addEventListener("click", handleOverlayClick);
+
+  const closeBtn = document.querySelector(".modal-close-btn");
+  const prevBtn = document.querySelector(".modal-prev");
+  const nextBtn = document.querySelector(".modal-next");
+
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (prevBtn) prevBtn.addEventListener("click", prevImage);
+  if (nextBtn) nextBtn.addEventListener("click", nextImage);
+
+  // Funkcije so dostopne tudi iz HTML onclick atributov.
+  window.openModal = openModal;
+  window.closeModal = closeModal;
+  window.prevImage = prevImage;
+  window.nextImage = nextImage;
+  window.handleOverlayClick = handleOverlayClick;
+
 
   // =========================
   // IZRAČUN SKUPNE CENE
