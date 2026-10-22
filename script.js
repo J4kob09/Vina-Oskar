@@ -144,8 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
       ]
     },
     {
-      src: "images/",
-      title: "Ruperče",
+      src: "images/ruperce.jpg",
+      title: "Vinograd: Ruperče",
       badge: "Ruperče",
       desc: "Vinograd se nahaja v Ruperčah na vzhodni legi, ki omogoča dobro jutranjo osončenost. Tla so lahka in peščena. V vinogradu je zasajena sorta chardonnay.",
       features: [
@@ -256,13 +256,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.key === "ArrowRight") nextImage();
   });
 
-  // Funkcije so dostopne tudi iz HTML onclick atributov.
-  window.openModal = openModal;
-  window.closeModal = closeModal;
-  window.prevImage = prevImage;
-  window.nextImage = nextImage;
-  window.handleOverlayClick = handleOverlayClick;
+  document.querySelectorAll(".gallery-card").forEach(function (card, i) {
+    card.addEventListener("click", function () { openModal(i); });
+  });
 
+  modal?.addEventListener("click", handleOverlayClick);
+  document.querySelector(".modal-close-btn")?.addEventListener("click", closeModal);
+  document.querySelector(".modal-prev")?.addEventListener("click", prevImage);
+  document.querySelector(".modal-next")?.addEventListener("click", nextImage);
 
   // =========================
   // IZRAČUN SKUPNE CENE
