@@ -51,7 +51,7 @@
 <!-- GLAVA STRANI -->
 <header>
 <div class="brand">
-<img src="images/oskar_beli_logo.png">
+<img src="images/oskar_beli_logo.png" alt="Oskar logo">
 <h1>Naši Vinogradi</h1>
 </div>
 </header>
@@ -61,7 +61,7 @@
 <section class="gallery-grid">
 
 <!-- OKENCE 1: Malečnik -->
-<div class="gallery-card" onclick="openModal(0)">
+<div class="gallery-card">
 <div class="gallery-thumb-wrap">
 <img alt="Malečnik" class="gallery-thumb" src="images/malecnik_2.jpg">
 <div class="zoom-hint">
@@ -78,7 +78,7 @@
 </div>
 
 <!-- OKENCE 2: Gorca -->
-<div class="gallery-card" onclick="openModal(1)">
+<div class="gallery-card">
 <div class="gallery-thumb-wrap">
 <img alt="Gorca" class="gallery-thumb" src="images/gorca_2.jpg"/>
 <div class="zoom-hint">
@@ -95,7 +95,7 @@
 </div>
 
 <!-- OKENCE 3: Hrenca -->
-<div class="gallery-card" onclick="openModal(2)">
+<div class="gallery-card">
 <div class="gallery-thumb-wrap">
 <img alt="Hrenca" class="gallery-thumb" src="images/hrenca.jpg"/>
 <div class="zoom-hint">
@@ -112,9 +112,9 @@
 </div>
 
 <!-- OKENCE 4: Ruperče -->
-<div class="gallery-card" onclick="openModal(3)">
+<div class="gallery-card">
 <div class="gallery-thumb-wrap">
-<img alt="Ruperče" class="gallery-thumb" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<img alt="Ruperče" class="gallery-thumb" src="images/ruperce.jpg"/>
 <div class="zoom-hint">
 <span class="zoom-hint-btn">🔍 Klikni za povečavo</span>
 </div>
@@ -129,7 +129,7 @@
 </div>
 
 <!-- OKENCE 5: Trčova -->
-<div class="gallery-card" onclick="openModal(4)">
+<div class="gallery-card">
 <div class="gallery-thumb-wrap">
 <img alt="Trčova" class="gallery-thumb" src="images/trcova.jpg"/>
 <div class="zoom-hint">
@@ -170,17 +170,17 @@
        MODALNO OKNO ZA POVEČAVO SLIKE IN OPIS
      ============================================================ -->
 
-<div class="modal-overlay" id="galleryModal" onclick="handleOverlayClick(event)">
+<div class="modal-overlay" id="galleryModal">
 <div class="modal-content-card">
 
 <!-- Gumb za zapiranje -->
-<button class="modal-close-btn" onclick="closeModal()" title="Zapri (Esc)">X</button>
+<button class="modal-close-btn" title="Zapri (Esc)">X</button>
 
 <!-- Leva stran: Povečana slika z navigacijskima gumboma -->
 <div class="modal-image-col">
-       <button class="modal-nav-arrow modal-prev" onclick="prevImage(event)" title="Prejšnja slika">‹</button>
+       <button class="modal-nav-arrow modal-prev" title="Prejšnja slika">‹</button>
        <img alt="Povečana slika" id="modalImg" src=""/>
-       <button class="modal-nav-arrow modal-next" onclick="nextImage(event)" title="Naslednja slika">›</button>
+       <button class="modal-nav-arrow modal-next" title="Naslednja slika">›</button>
 </div>
 
 <!-- Desna stran: Podroben opis motiva -->
