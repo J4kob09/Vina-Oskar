@@ -1692,3 +1692,65 @@ footer p {
       margin: 0;
       flex-shrink: 0;
     }
+
+
+/* ============================================================
+   Razredi, preneseni iz inline stilov (zaradi CSP brez 'unsafe-inline')
+   ============================================================ */
+.card .price {
+  font-size: 23px;
+  padding-bottom: 10px;
+}
+
+.feature-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--silver-accent);
+  font-weight: 600;
+}
+
+.winemaker-photo.winemaker-photo--short {
+  height: 340px;
+}
+
+.info-box a.info-link {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h1.contact-title {
+  text-align: center;
+  font-family: var(--font-serif);
+}
+
+.wine-thumb.wine-thumb-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.customer-form-card h3.form-card-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.customer-form-card p.form-card-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 25px 0;
+}
+
+strong.payment-note {
+  display: block;
+  text-align: center;
+}
+
+form button.btn-submit {
+  font-size: 13px;
+  padding: 16px;
+}
