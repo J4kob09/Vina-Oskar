@@ -1754,3 +1754,9 @@ form button.btn-submit {
   font-size: 13px;
   padding: 16px;
 }
+
+/* Naslov na Kontaktih */
+
+.kontaktni_naslov {
+  text-align: center;
+}
