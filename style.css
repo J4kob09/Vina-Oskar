@@ -1760,3 +1760,7 @@ form button.btn-submit {
 .kontaktni_naslov {
   text-align: center;
 }
+
+.hp-field { 
+  display: none;
+}
