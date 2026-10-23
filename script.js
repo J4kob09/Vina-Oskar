@@ -96,6 +96,16 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
+            // Preverimo reCAPTCHA
+      const captcha = orderForm.querySelector('[name="g-recaptcha-response"]');
+      if (!captcha || !captcha.value) {
+        alert("Prosimo, potrdite, da niste robot.");
+        return;
+      }
+
+      // Pripravimo obrazec in ga pošljemo
+      HTMLFormElement.prototype.submit.call(orderForm);
+
       // Pripravimo obrazec in ga pošljemo
       HTMLFormElement.prototype.submit.call(orderForm);
     });
